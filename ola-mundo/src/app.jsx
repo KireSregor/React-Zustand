@@ -1,7 +1,10 @@
+import { useStore } from "./zustand"
+
+
+
 export function App(){
+    const bears = useStore((state) => state.bears)
     return (
-        <div>
-            <h1>Hola Neil</h1>
-        </div>
+        <h1>{bears} around here...</h1>
     )
 }
