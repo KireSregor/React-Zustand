@@ -1,10 +1,16 @@
-import { useStore } from "./zustand"
-
-
+import { Agregar } from "./agregar"
+import { Disminuir } from "./disminuir"
+import { useStore } from "./store"
 
 export function App(){
-    const bears = useStore((state) => state.bears)
+    const edadAbuelo = useStore((state) => state.edadAbuelo)
+
+
     return (
-        <h1>{bears} around here...</h1>
+        <>
+        <h1>{edadAbuelo}</h1>
+            <Agregar />
+            <Disminuir />
+        </>
     )
 }
